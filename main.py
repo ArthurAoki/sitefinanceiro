@@ -158,4 +158,5 @@ def download_arquivo(nome_arquivo):
 # RODAR O SERVIDOR
 # ===============================
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=10000)
